@@ -1,0 +1,24 @@
+.wrapper {
+    @apply flex my-2 py-5 px-4 border border-purple-300 rounded-2xl justify-between items-center border-opacity-30 shadow-sm shadow-purple-200
+}
+
+.contentWrapper {
+    @apply flex items-center w-3/4
+}
+
+.controlsWrapper {
+    @apply w-1/4 flex items-center justify-around
+}
+
+.iconContainer > * {
+    @apply text-2xl mr-4 transition-colors duration-300
+}
+
+.contentContainer {
+    &> h3 {
+        @apply text-xl font-semibold text-zinc-800
+    }
+    &> p {
+        @apply text-base text-zinc-400 mt-2
+    }
+}

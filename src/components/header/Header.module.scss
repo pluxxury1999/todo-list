@@ -1,0 +1,6 @@
+.header {
+    @apply w-2/3 mx-auto bg-purple-700 text-white px-7 py-4 rounded-b-lg;
+    &> h1{
+        @apply text-3xl
+    }
+}
