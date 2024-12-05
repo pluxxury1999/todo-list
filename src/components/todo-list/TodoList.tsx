@@ -1,18 +1,19 @@
 import { useAppSelector } from "../../hooks/hooks.ts";
 import TodoItem from "../list-item/TodoItem.tsx";
+import styles from "./TodoList.module.css";
 
 const TodoList = () => {
-    const todos = useAppSelector(state => state.todos)
-
-    const todoComps = todos.map(todo => {
-        return <TodoItem id={todo.id} title={todo.title} description={todo.description} isCompleted={todo.isCompleted} isNecessary={todo.isNecessary} />
-    })
+    const todos = useAppSelector(state => state.todos);
 
     return (
-        <li>
-            {todoComps}
-        </li>
-    )
-}
+        <section className={styles.container}>
+            <ul>
+                {todos.map(todo => {
+                    return <TodoItem todo={todo} />;
+                })}
+            </ul>
+        </section>
+    );
+};
 
-export default TodoList
+export default TodoList;

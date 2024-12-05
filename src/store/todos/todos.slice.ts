@@ -1,15 +1,8 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { ITodo } from "../../types/types.ts";
+import { initialTodos } from "../../data/data.ts";
 
-const initialState: Array<ITodo> = [{
-    id: "yapidor",
-    title: "testTodo",
-    description: "It's test todo for initial state",
-    isCompleted: false,
-    isNecessary: false,
-}]
-
-// type PayloadType = Omit<ITodo, 'id'>
+const initialState: Array<ITodo> = initialTodos
 
 export const todoSlice = createSlice({
     name: "todos",

@@ -1,10 +1,13 @@
-import TodoList from "./todo-list/TodoList.tsx"
+import Header from "./header/Header.tsx";
+import TodoList from "./todo-list/TodoList.tsx";
 
 function App() {
-
     return (
-        <TodoList />
-    )
+        <>
+            <Header />
+            <TodoList />
+        </>
+    );
 }
 
-export default App
+export default App;
