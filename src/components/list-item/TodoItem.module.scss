@@ -11,14 +11,15 @@
 }
 
 .iconContainer > * {
-    @apply text-2xl mr-4 transition-colors duration-300
+    @apply text-2xl mr-4 transition-colors duration-300 cursor-pointer
 }
 
 .contentContainer {
-    &> h3 {
+    & > h3 {
         @apply text-xl font-semibold text-zinc-800
     }
-    &> p {
+
+    & > p {
         @apply text-base text-zinc-400 mt-2
     }
 }

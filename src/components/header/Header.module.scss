@@ -1,6 +1,20 @@
 .header {
-  @apply w-2/3 mx-auto bg-purple-700 text-white px-7 py-4 rounded-b-lg flex justify-between items-center;
-  & > h1 {
-    @apply text-3xl
-  }
+    @apply w-2/3 mx-auto bg-purple-700 text-white px-7 py-4 rounded-b-lg flex justify-between items-center;
+    & > h1 {
+        @apply text-3xl pointer-events-none w-1/5
+    }
+
+    & > button {
+        @apply border border-gray-100 p-1 rounded-md transition-colors cursor-pointer flex items-center text-sm;
+        &:hover {
+            @apply bg-purple-500;
+            .icon {
+                @apply scale-125
+            }
+        }
+    }
+}
+
+.icon {
+    @apply text-lg transition-all
 }

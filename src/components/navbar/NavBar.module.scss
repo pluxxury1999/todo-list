@@ -1,5 +1,5 @@
 .container {
-    @apply w-1/5;
+    @apply w-1/5 min-w-fit;
     & > ul {
         @apply flex justify-between
     }
