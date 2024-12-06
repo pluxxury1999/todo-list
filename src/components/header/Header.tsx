@@ -3,6 +3,7 @@ import NavBar from "../navbar/NavBar.tsx";
 import { IoIosAdd } from "react-icons/io";
 import { useState } from "react";
 import Popup from "../pop-up/PopUp.tsx";
+import AddTodoForm from "../add-todo-form/AddTodoForm.tsx";
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -21,8 +22,12 @@ const Header = () => {
                 </button>
                 <NavBar />
             </header>
-            <Popup isOpen={isOpen} onClose={() => setIsOpen(false)}>
-                <div>Popup content</div>
+            <Popup
+                title={"Add Todo"}
+                isOpen={isOpen}
+                onClose={() => setIsOpen(false)}
+            >
+                <AddTodoForm />
             </Popup>
         </>
     );

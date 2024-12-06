@@ -12,5 +12,6 @@ export interface INavLinkProps {
 export interface IPopupProps {
     children: ReactNode;
     isOpen: boolean;
+    title: string;
     onClose: () => void;
 }
