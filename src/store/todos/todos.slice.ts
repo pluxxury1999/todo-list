@@ -1,8 +1,8 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { ITodo } from "../../types/types.ts";
-import { initialTodos } from "../../data/data.ts";
+import { initialTodos } from "../../data/initialTodos.ts";
 
-const initialState: Array<ITodo> = initialTodos
+const initialState: Array<ITodo> = initialTodos;
 
 export const todoSlice = createSlice({
     name: "todos",
@@ -14,18 +14,21 @@ export const todoSlice = createSlice({
                 title: action.payload.title,
                 description: action.payload.description,
                 isCompleted: action.payload.isCompleted,
-                isNecessary: action.payload.isNecessary
-            })
+                isNecessary: action.payload.isNecessary,
+            });
         },
-        toggleComplete: (state: Array<ITodo>, action: PayloadAction<string>) => {
-            const todoToToggle = state.find(todo => todo.id === action.payload)
+        toggleComplete: (
+            state: Array<ITodo>,
+            action: PayloadAction<string>,
+        ) => {
+            const todoToToggle = state.find(todo => todo.id === action.payload);
             if (todoToToggle) {
-                todoToToggle.isCompleted = !todoToToggle.isCompleted
+                todoToToggle.isCompleted = !todoToToggle.isCompleted;
             }
-        }
-    }
-})
+        },
+    },
+});
 
-export const {addTodo, toggleComplete} = todoSlice.actions
+export const { addTodo, toggleComplete } = todoSlice.actions;
 
-export default todoSlice.reducer
+export default todoSlice.reducer;

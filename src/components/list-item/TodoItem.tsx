@@ -9,7 +9,7 @@ const TodoItem: React.FC<ITodoItemProps> = ({ todo }) => {
     const dispatch = useAppDispatch();
 
     const { id, title, description, isCompleted, isNecessary } = todo;
-
+    
     return (
         <li key={id} className={styles.wrapper}>
             <div className={styles.contentWrapper}>

@@ -1,0 +1,13 @@
+.linkWrapper {
+    @apply border border-gray-100 p-1 rounded-md transition-colors cursor-pointer;
+    &:hover {
+        @apply bg-purple-500;
+        .linkIcon {
+            @apply scale-125;
+        }
+    }
+}
+
+.linkIcon {
+    @apply text-2xl transition-all;
+}

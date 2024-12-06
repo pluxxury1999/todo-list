@@ -1,0 +1,6 @@
+.container {
+    @apply w-1/5;
+    & > ul {
+        @apply flex justify-between
+    }
+}
