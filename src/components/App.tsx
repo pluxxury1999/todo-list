@@ -14,7 +14,7 @@ function App() {
             <Routes>
                 <Route path={"/"} element={<Navigate to={"/all"} replace />} />
                 <Route path={"/all"} element={<TodoList />} />
-                <Route path={"*"} element={<div>not found</div>} />
+                <Route path={"*"} element={<div>Not Found</div>} />
             </Routes>
         </Router>
     );
