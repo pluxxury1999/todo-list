@@ -1,6 +1,6 @@
 import { IPopupProps } from "../../types/propsTypes.ts";
 import React, { useEffect } from "react";
-import styles from "./PopUp.module.scss";
+import styles from "./Popup.module.scss";
 import { IoClose } from "react-icons/io5";
 
 const Popup: React.FC<IPopupProps> = ({ children, title, isOpen, onClose }) => {

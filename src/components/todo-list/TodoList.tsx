@@ -1,5 +1,5 @@
 import { useAppSelector } from "../../hooks/hooks.ts";
-import TodoItem from "../list-item/TodoItem.tsx";
+import TodoItem from "../todo-item/TodoItem.tsx";
 import styles from "./TodoList.module.scss";
 
 const TodoList = () => {

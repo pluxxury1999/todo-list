@@ -2,7 +2,7 @@ import styles from "./Header.module.scss";
 import NavBar from "../navbar/NavBar.tsx";
 import { IoIosAdd } from "react-icons/io";
 import { useState } from "react";
-import Popup from "../pop-up/PopUp.tsx";
+import Popup from "../popup/Popup.tsx";
 import AddTodoForm from "../add-todo-form/AddTodoForm.tsx";
 
 const Header = () => {

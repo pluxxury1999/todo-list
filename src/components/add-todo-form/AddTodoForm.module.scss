@@ -1,0 +1,55 @@
+.form {
+    @apply w-full px-5 mt-3;
+    & > div {
+        @apply relative;
+    }
+}
+
+.textFieldsLabel {
+    @apply absolute text-sm bg-white leading-3 left-3 top-1 px-1 z-10 select-none;
+}
+
+.textFields {
+    @apply mt-3 mb-1 resize-none text-lg p-3 border rounded-md w-full;
+    &:focus {
+        @apply outline-purple-600;
+    }
+}
+
+.errorField {
+    @apply text-sm text-rose-600 ml-3 mb-2
+}
+
+button {
+    &[type="submit"] {
+        @apply bg-purple-600 transition-all block mx-auto my-0 py-1 px-5 rounded-md text-slate-100 mt-2;
+        &:hover {
+            @apply scale-110
+        }
+    }
+}
+
+.toggleContainer {
+    @apply flex items-center ml-5 select-none mb-3 w-fit cursor-pointer
+}
+
+
+.toggleBg {
+    @apply block w-12 h-6 bg-gray-300 rounded-full relative transition-colors ml-4
+}
+
+.toggleSlider {
+    @apply shadow absolute w-6 h-6 rounded-full bg-white top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 transition-all
+}
+
+input[type="checkbox"] {
+    @apply hidden ml-10;
+    &:checked {
+        & + .toggleBg {
+            @apply bg-purple-600;
+            & > .toggleSlider {
+                @apply left-3/4
+            }
+        }
+    }
+}

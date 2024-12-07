@@ -1,7 +1,7 @@
 .header {
     @apply w-2/3 mx-auto bg-purple-700 text-white px-7 py-4 rounded-b-lg flex justify-between items-center;
     & > h1 {
-        @apply text-3xl pointer-events-none w-1/5
+        @apply text-3xl select-none w-1/5
     }
 
     & > button {
