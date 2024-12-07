@@ -1,0 +1,6 @@
+.counterWrapper {
+    @apply w-full flex justify-end items-center text-lg px-6;
+    & > span {
+        @apply mx-3 text-2xl font-semibold
+    }
+}

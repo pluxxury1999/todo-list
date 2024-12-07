@@ -15,3 +15,11 @@ export interface IPopupProps {
     title: string;
     onClose: () => void;
 }
+
+export interface ITodoListProps {
+    todoType: "all" | "completed" | "necessary" | "uncompleted";
+}
+
+export interface ITodosCounterProps {
+    totalTodos: number;
+}

@@ -17,6 +17,9 @@ export const todoSlice = createSlice({
                 isNecessary: action.payload.isNecessary,
             });
         },
+        removeTodo: (state: Array<ITodo>, action: PayloadAction<string>) => {
+            return state.filter(todo => todo.id !== action.payload);
+        },
         toggleComplete: (
             state: Array<ITodo>,
             action: PayloadAction<string>,
@@ -38,6 +41,7 @@ export const todoSlice = createSlice({
     },
 });
 
-export const { addTodo, toggleComplete, toggleNecessary } = todoSlice.actions;
+export const { addTodo, removeTodo, toggleComplete, toggleNecessary } =
+    todoSlice.actions;
 
 export default todoSlice.reducer;

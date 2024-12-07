@@ -1,17 +1,31 @@
 .wrapper {
-    @apply flex my-2 py-5 px-4 border border-purple-300 rounded-2xl justify-between items-center border-opacity-30 shadow-sm shadow-purple-200
+    @apply flex my-2 py-5 px-4 border-2 rounded-2xl justify-between items-center border-opacity-30 shadow-sm transition-all;
+    //@apply flex my-2 py-5 px-4 border border-rose-400 rounded-2xl justify-between items-center border-opacity-30 shadow-sm shadow-red-200 transition-all;
 }
 
 .contentWrapper {
-    @apply flex items-center w-3/4
+    @apply flex items-center w-5/6
 }
 
 .controlsWrapper {
-    @apply w-1/4 flex items-center justify-around
+    @apply w-1/6 flex items-center justify-around;
+    & > * {
+        @apply text-2xl cursor-pointer transition-all;
+
+        &:hover {
+            @apply text-zinc-500 animate-shake;
+        }
+    }
 }
 
-.iconContainer > * {
-    @apply text-2xl mr-4 transition-colors duration-300 cursor-pointer
+.iconContainer {
+    @apply transition-all mr-4 ;
+    &:hover {
+        @apply animate-shake;
+    }
+    & > * {
+        @apply text-2xl transition-colors duration-300 cursor-pointer opacity-100
+    }
 }
 
 .contentContainer {
