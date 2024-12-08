@@ -30,10 +30,10 @@
 
 .contentContainer {
     & > h3 {
-        @apply text-xl font-semibold text-zinc-800
+        @apply text-xl font-semibold text-zinc-800 break-all;
     }
 
     & > p {
-        @apply text-base text-zinc-400 mt-2
+        @apply text-base text-zinc-400 mt-2 break-all;
     }
 }

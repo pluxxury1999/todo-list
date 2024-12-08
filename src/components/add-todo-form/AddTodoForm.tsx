@@ -32,6 +32,9 @@ const AddTodoForm = () => {
 
     const lastId = useAppSelector(store => {
         const storeLength = store.todos.length;
+        if (storeLength === 0) {
+            return 0;
+        }
         return parseInt(store.todos[storeLength - 1].id);
     });
 
@@ -40,7 +43,6 @@ const AddTodoForm = () => {
             ...values,
             id: (lastId + 1).toString(),
         };
-        console.log(newTodo);
         dispatch(addTodo(newTodo));
     };
 
